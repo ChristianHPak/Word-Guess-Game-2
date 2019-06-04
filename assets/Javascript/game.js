@@ -5,11 +5,13 @@ var wins = 0;
 var guessesRemaining = 10;
 var correctblanks = [];
 
+//making a splashpage, use .show and .hide in an ifelse boolean statement
 
 // character variables
 var characters = ['bowser', 'waluigi', 'koopalings', 'birdo', 'rosalina', 'toad', 'yoshi']
 
 var ranCharacter = characters[Math.floor(Math.random() * characters.length)];
+console.log(ranCharacter)
 
 function reset(){
     guessesRemaining = 10;
@@ -26,10 +28,13 @@ function reset(){
 }
 reset()
 
+function addLetter(str, index, char){
+    str = correctblanks.substr(0, index) + char + correctblanks.substr(index + 1)
+    console.log(correctblanks)
+}
+
 document.onkeyup = function (event){
-    console.log(event);
     var userPress = event.key.toLowerCase();
-    console.log(userPress);
 
     var lettersinword = false;
 
@@ -40,10 +45,11 @@ document.onkeyup = function (event){
     }
 
     // if true, the letter will remove blanks and replace
-    if (lettersinword) {
+    if (lettersinword) { 
         for (var i = 0; i < blanks; i++) {
             if (ranCharacter[i] == userPress) {
                 correctblanks = userPress;
+                addLetter();
             }
         }
         // the guess will go down and the guessed letter will be outputted
@@ -52,4 +58,4 @@ document.onkeyup = function (event){
         $("#lettersguessed").append(userPress + " ")
     }
 }
-alert("Press OK To Start")
+alert("Press Enter To Start")
