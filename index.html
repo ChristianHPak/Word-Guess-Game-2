@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Word Guess Game </title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="home">
+        <h2>Press any key to get started!</h2>
+    </div>
+
+    <section id="game">
+        <h1>Nintendo Characters!</h1>
+        <div class="container border border-primary">
+            <div class="row">
+                <div class="col-md" style="border: dashed;">
+                    <img src="../Basic-Portfolio/assets/images/wah.jpeg" alt="">
+                </div>
+                <div class="col-md " style="border: dashed;">
+                    <h2>wins: </h2>
+                    <p id="wins"></p>
+                    <h2>Current Word</h2>
+                    <p id="currentword"></p>
+                    <h2>Number of Guesses Remaining</h2>
+                    <p id="guessesremaining"></p>
+                    <h2>Letters already guessed</h2>
+                    <p id="lettersguessed"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="assets/Javascript/game.js"></script>
+
+</html>
